@@ -24,7 +24,7 @@ func (this *Book) WriteBook() {
 func main() {
 
 	
-	var a string = "lars" // -> pair<statictype::string, value:"lars">
+	var a string = "lars" // -> pair<static type::string, value:"lars">
 
 	fmt.Println(a)
 	// pair<type::string, value:"lars">
@@ -39,6 +39,8 @@ func main() {
 	// pair<type: , value: >
 	var r Reader;
 	// r: pair<type::Book, value:Book{}的地址>
+
+	// b -> 派生类,  r -> 基类
 	r = b 
 
 	r.ReadBook()

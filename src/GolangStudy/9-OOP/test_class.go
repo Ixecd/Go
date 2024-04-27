@@ -10,7 +10,6 @@ type Human struct {
 type SuperMan struct {
 	Human // 表示SuperMan 类继承了 Human结构体
 
-	
 	level int
 
 }
