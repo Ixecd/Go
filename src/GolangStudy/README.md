@@ -10,3 +10,10 @@
     static type: int string ...
     concrete type: interface所指向的具体数据类型,系统看得见的类型
     所谓pair 就是指<type, value>
+
+4. 进程/线程的数量越多,切换成本就越大,也就越浪费
+
+5. 进程占用内存      虚拟内存4GB(32big OS)
+   线程            大概4MB
+
+6. GMP G -> goroutine, P -> processor, M -> thread 

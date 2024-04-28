@@ -23,7 +23,6 @@ func (this *Book) WriteBook() {
 
 func main() {
 
-	
 	var a string = "lars" // -> pair<static type::string, value:"lars">
 
 	fmt.Println(a)
