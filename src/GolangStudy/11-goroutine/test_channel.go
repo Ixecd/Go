@@ -6,6 +6,7 @@ import "fmt"
 
 func main() {
 	// chan 的类型为 int
+	// 无缓存
 	c := make(chan int)
 
 	go func() {

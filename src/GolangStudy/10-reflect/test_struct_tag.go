@@ -10,7 +10,8 @@ type resume struct {
 }
 
 func findTag(str interface{}) {
-	t := reflect.TypeOf(str).Elem() // 当前结构体的所有元素
+	// 如果这里传入的是&re表示re的地址,此时TypeOf(str)表示指针类型,其中的Elem()才表示具体的结构体类型.
+	t := reflect.TypeOf(str).Elem() 
 
 	for i := 0; i < t.NumField(); i++ {
 		tagstring := t.Field(i).Tag.Get("info")
@@ -22,6 +23,7 @@ func findTag(str interface{}) {
 func main() {
 	var re resume
 
-	findTag(&re)
+	findTag(re) // -> 传值,就不需要 t := reflect.TypeOf(str).Elem() 了
+	findTag(&re) // -> 传指针
 
 }

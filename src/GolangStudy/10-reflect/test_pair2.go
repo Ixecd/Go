@@ -9,15 +9,17 @@ type User struct {
 	Age int
 }
 
+
+// 这两个不能同时存在
 func (this User) Call() {
 	fmt.Println("user is called...")
 	fmt.Printf("%v\n", this)
 }
 
-func (this *User) Call() {
-	fmt.Println("*user is called...")
-	fmt.Printf("%v\n", this)
-}
+// func (this *User) Call() {
+// 	fmt.Println("*user is called...")
+// 	fmt.Printf("%v\n", this)
+// }
 
 func reflectNum(arg interface{}) {
 	fmt.Println("type = ", reflect.TypeOf(arg))
