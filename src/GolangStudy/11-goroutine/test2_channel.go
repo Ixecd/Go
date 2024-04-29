@@ -24,7 +24,7 @@ func main() {
 	for i := 0; i < 4; i++ {
 		// 这里 <-c 之后chann有空闲位置,上面的阻塞会解除
 		num := <-c
-		time.Sleep(1 * time.Second)
+		// time.Sleep(1 * time.Second)
 		fmt.Println("num = ", num)
 	}
 

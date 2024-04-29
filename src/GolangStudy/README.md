@@ -1,5 +1,6 @@
 1. 导包问题
-    go env -w GO111MODULE=off
+    go env -w GO111MODULE=off 关闭GOMODULE
+    go env -w GO111MODULE=on 打开
 
 2. slice 动态数组
     底层编译器二倍扩容
@@ -17,3 +18,20 @@
    线程            大概4MB
 
 6. GMP G -> goroutine, P -> processor, M -> thread 
+
+7. Golang项目依赖Go modules(为了淘汰GOPATH)
+    1.Go语言长久以来的依赖管理问题
+    2.淘汰现有的GOPATH的使用模式
+    3.统一社区中的其他的依赖管理工具
+
+8. GOPATH的弊端
+    无版本控制概念 go get github.com/Krewoe/Lars -u 表示下载过程(无法传达任何版本概念)
+    无法同步一致第三方版本号, 别人期待的依赖库和自己需要的版本不一致
+    无法指定当前项目引用的第三方版本号
+
+
+
+
+
+
+
