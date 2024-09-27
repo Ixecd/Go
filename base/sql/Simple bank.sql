@@ -1,9 +1,3 @@
-CREATE TYPE "Currency" AS ENUM (
-  'USD',
-  'EUR',
-  'CNY'
-);
-
 CREATE TABLE "accounts" (
   "id" BIGSERIAL PRIMARY KEY,
   "owner" varchar NOT NULL,
@@ -18,13 +12,12 @@ CREATE TABLE "entries" (
   "amount" bigint NOT NULL,
   "created_at" timestamptz NOT NULL DEFAULT (now())
 );
-
-CREATE TABLE "transfers" (
-  "id" bigserial PRIMARY KEY,
-  "from_account_id" bigint NOT NULL,
-  "to_account_id" bigint NOT NULL,
-  "amount" bigint NOT NULL,
-  "created_at" timestampz NOT NULL DEFAULT (now())
+CREATE TABLE "transfers"(
+    "id" bigserial PRIMARY KEY,
+    "from_account_id" bigint NOT NULL,
+    "to_account_id" bigint NOT NULL,
+    "amount" bigint NOT NULL,
+    "created_at" timestamptz NOT NULL DEFAULT (now())
 );
 
 CREATE INDEX ON "accounts" ("owner");
@@ -46,3 +39,5 @@ ALTER TABLE "entries" ADD FOREIGN KEY ("account_id") REFERENCES "accounts" ("id"
 ALTER TABLE "transfers" ADD FOREIGN KEY ("from_account_id") REFERENCES "accounts" ("id");
 
 ALTER TABLE "transfers" ADD FOREIGN KEY ("to_account_id") REFERENCES "accounts" ("id");
+
+-- delClearTable -> Ctrl + S
