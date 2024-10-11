@@ -15,7 +15,7 @@ func foo(a int, b string) int {
 func foo2(a int, b string) (int, string) {
 	return a, b
 }
-// 有形参名(默认为0)
+// 有形参名(默认为0), 返回类型如果是多个,必须用括号括起来
 func foo3(a string, b int) (r1 int,r2 int) {
 	return 100, 200
 }
