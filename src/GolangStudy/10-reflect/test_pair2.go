@@ -22,6 +22,8 @@ func (this User) Call() {
 // }
 
 func reflectNum(arg interface{}) {
+	fmt.Printf("type of arg = %T\n", arg)
+	fmt.Printf("value of arg = %v\n", arg)
 	fmt.Println("type = ", reflect.TypeOf(arg))
 	fmt.Println("value = ", reflect.ValueOf(arg))	
 }

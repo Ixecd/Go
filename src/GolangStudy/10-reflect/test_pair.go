@@ -30,6 +30,8 @@ func main() {
 	var allType interface{}
 	allType = a
 
+	fmt.Printf("type of alltype: %T\n", allType)
+
 	str, _ := allType.(string)
 	fmt.Println(str)
 
@@ -48,6 +50,8 @@ func main() {
 	var w Writer;
 	// w:
 	w = r.(Writer) // w 和 r具体的type是一样的
+
+	fmt.Printf("type of w and r: %T, %T\n", w, r)
 
 	w.WriteBook()
 
