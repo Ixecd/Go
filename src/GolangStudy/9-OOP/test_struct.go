@@ -58,6 +58,12 @@ func main() {
 	// Go中的struct中的this当作struct来处理
 	// 就算传入的是*this 也当struct来处理
 	hero := Hero{Name : "123", Ad : 123, Level : 1}
+
+	hero2 := Hero{"456", 456, 2}
+
+	hero2.SetName()
+	hero2.GetName()
+
 	hero.SetName()
 	hero.GetName()
 }
